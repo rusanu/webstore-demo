@@ -1,2 +1,46 @@
-
-{{outlet}}
+<div class="row">
+  <div class="col-sm-offset-3 col-sm-6">
+<form>
+  <div class="form-group">
+    <label for="{{guid-for this 'name'}}">Name</label>
+    {{input
+        id=(guid-for this 'name')
+        type='text'
+        class='form-control'
+        value=model.name
+        placeholder='Product name'}}
+  </div>
+  <div class="form-group">
+    <label for="{{guid-for this 'description'}}">Description</label>
+    {{textarea 
+        id=(guid-for this 'description')
+        class='form-control'
+        value=model.description}}
+  </div>
+  <div class="form-group">
+    <label for="{{guid-for this 'price'}}">Price</label>
+    {{input
+      id=(guid-for this 'price')
+      type='number'
+      class='form-control'
+      value=model.price
+      placeholder='9.95'}}
+  </div>
+  <div class="form-group">
+    <label for="{{guid-for this 'stock'}}">Stock</label>
+    {{input
+      id=(guid-for this 'stock')
+      type='number'
+      class='form-control'
+      value=model.stock
+      placeholder='10'}}
+  </div>
+  <div class="for-group">
+    <div class="btn-group">
+      <button class="btn btn-default" {{action 'add'}}>Add</button>
+      <button class="btn btn-danger" {{action 'cancel'}}>Cancel</button>
+    </div>
+  </div>
+</form>
+</div>
+</div>
