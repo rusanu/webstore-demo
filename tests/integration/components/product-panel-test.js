@@ -9,16 +9,9 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{product-panel}}`);
+  this.set('product', {name: 'The Name', description: 'The Description', stock: 1, price: 1});
 
-  assert.equal(this.$().text().trim(), '');
+  this.render(hbs`{{product-panel product=product}}`);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#product-panel}}
-      template block text
-    {{/product-panel}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().replace(/[\s\r\n]+/g,''), 'TheNameTheDescriptionStock:1Price:1AddToCart');
 });
