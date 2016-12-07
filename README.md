@@ -1,3 +1,6 @@
+This is the repo for the EmberJS talk at BucharestJS Dec. 6, 2016  
+http://www.slideshare.net/rusanu/emberjs-bucharestjs/rusanu/emberjs-bucharestjs
+
 # webstore-demo
 
 This README outlines the details of collaborating on this Ember application.
